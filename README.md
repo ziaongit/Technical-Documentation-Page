@@ -61,3 +61,6 @@ User Story #14: On regular sized devices (laptops, desktops), the element with i
 ```shell
 User Story #15: My Technical Documentation page should use at least one media query.
 ```
+
+## See the project on CodePen
+Click here [here]()

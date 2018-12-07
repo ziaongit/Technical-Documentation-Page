@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+
+    <nav class="large_menu" id="navbar">
+        <header>
+            <span class="list_title">List of CSS Tricks</span>
+            <ul>
+                <li>
+                    <a href="#Introduction" class="nav-link">Introduction</a>
+                </li>
+                <li>
+                    <a href="#Better_Helvetica" class="nav-link">Better Helvetica</a>
+                </li>
+                <li>
+                    <a href="#Blurry_Text" class="nav-link">Blurry Text</a>
+                </li>
+                <li>
+                    <a href="#CSS_Box_Shadow" class="nav-link">CSS Box Shadow</a>
+                </li>
+                <li>
+                    <a href="#CSS_Text_Shadow" class="nav-link">CSS Text Shadow</a>
+                </li>
+                <li>
+                    <a href="#CSS_Triangle" class="nav-link">CSS Triangle</a>
+                </li>
+                <li>
+                    <a href="#Drop_Caps" class="nav-link">Drop Caps</a>
+                </li>
+                <li>
+                    <a href="#Fancy_Ampersand" class="nav-link">Fancy Ampersand</a>
+                </li>
+                <li>
+                    <a href="#Fluid_Typography" class="nav-link">Fluid Typography</a>
+                </li>
+                <li>
+                    <a href="#Monotone_an_Image_with_CSS" class="nav-link">Monotone an Image with CSS</a>
+                </li>
+                <li>
+                    <a href="#Tucked_Corners" class="nav-link">Tucked Corners</a>
+                </li>
+                <li>
+                    <a href="#Typewriter_Effect" class="nav-link">Typewriter Effect</a>
+                </li>
+            </ul>
+        </header>
+    </nav>
+
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                <h1>Introduction</h1>
+            </header>
+            <article>
+                <p>Below is a short list of items that are nice tips taken from
+                    <a href="https://css-tricks.com/" target="_blank">CSS-Tricks.com</a>.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Better_Helvetica">
+            <header>
+                <h2>Better Helvetica</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <p>Just a simple bit of code that defaults to the best available Helvetica.</p>
+                <pre><code class="css">      body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+          }</code></pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Blurry_Text">
+            <header>
+                <h2>Blurry Text</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+            <article>
+                <p>Make the text color transparent but add a shadow:</p>
+                <pre><code class="css">      .blur {
+            color: transparent;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+          }</code></pre>
+
+            </article>
+
+        </section>
+
+        <section class="main-section" id="CSS_Box_Shadow">
+            <header>
+                <h2>CSS Box Shadow</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <p>Used in casting shadows off block-level elements (like divs).</p>
+                <h4>Outer Shadow</h4>
+                <pre><code class="css">      .shadow {
+            -moz-box-shadow:    3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow:         3px 3px 5px 6px #ccc;
+          }</code></pre>
+
+                <ol>
+                    <li>The horizontal offset of the shadow, positive means the shadow will be on the right of the box, a negative
+                        offset will put the shadow on the left of the box.</li>
+                    <li>The vertical offset of the shadow, a negative one means the box-shadow will be above the box, a positive
+                        one means the shadow will be below the box.</li>
+                    <li>The blur radius (optional), if set to 0 the shadow will be sharp, the higher the number, the more blurred
+                        it will be.</li>
+                    <li>The spread radius (optional), positive values increase the size of the shadow, negative values decrease
+                        the size. Default is 0 (the shadow is same size as blur).</li>
+                    <li>Color</li>
+                </ol>
+
+                <h4>Inner Shadow</h4>
+                <pre><code class="css">      .shadow {
+            -moz-box-shadow:    inset 0 0 10px #000000;
+            -webkit-box-shadow: inset 0 0 10px #000000;
+            box-shadow:         inset 0 0 10px #000000;
+          }</code></pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="CSS_Text_Shadow">
+            <header>
+                <h2>CSS Text Shadow</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <p>Regular text shadow:</p>
+                <pre><code class="css">      p { text-shadow: 1px 1px 1px #000; }</code></pre>
+                <p>Multiple shadows.</p>
+                <pre><code class="css">      p { text-shadow: 1px 1px 1px #000, 3px 3px 5px blue; }</code></pre>
+                <p>The first two values specify the length of the shadow offset. The first value specifies the horizontal distance
+                    and the second specifies the vertical distance of the shadow. The third value specifies the blur radius
+                    and the last value describes the color of the shadow:</p>
+
+                <ol>
+                    <li>value = The X-coordinate</li>
+                    <li>value = The Y-coordinate</li>
+                    <li>value = The blur radius</li>
+                    <li>value = The color of the shadow</li>
+                </ol>
+
+                <p>Using positive numbers as the first two values ends up with placing the shadow to the right of the text horizontally
+                    (first value) and placing the shadow below the text vertically (second value).</p>
+
+                <p>The third value, the blur radius, is an optional value which can be specified but don’t have to. It’s the
+                    amount of pixels the text is stretched which causes a blur effect. If you don’t use the third value it
+                    is treated as if you specified a blur radius of zero.</p>
+
+                <p>Also, remember you can use RGBA values for the color, for example, a 40% transparency of white:</p>
+
+                <pre><code class="css">      p { text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); }</code></pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="CSS_Triangle">
+            <header>
+                <h2>CSS Triangle</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <h4>HTML</h4>
+
+                <p>You can make them with a single div. It's nice to have classes for each direction possibility.</p>
+                <pre>
+          <code class="html">      &lt;div class="arrow-up"&lt;/div&gt;
+          &lt;div class="arrow-down"&gt;&lt;/div&gt;
+          &lt;div class="arrow-left"&gt;&lt;/div&gt;
+          &lt;div class="arrow-right"&gt;&lt;/div&gt;</code></pre>
+
+                <h4>CSS</h4>
+
+                <p>The idea is a box with zero width and height. The actual width and height of the arrow is determined by the
+                    width of the border. In an up arrow, for example, the bottom border is colored while the left and right
+                    are transparent, which forms the triangle.</p>
+
+                <pre>
+          <code class="css">      .arrow-up {
+            width: 0;
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid black;
+          }
+    
+          .arrow-down {
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #f00;
+          }
+    
+          .arrow-right {
+            width: 0; 
+            height: 0; 
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-left: 60px solid green;
+          }
+    
+          .arrow-left {
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            border-right:10px solid blue; 
+          }</code></pre>
+
+                <h4>Demo</h4>
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="lotjh" data-default-tab="result" data-user="chriscoyier" data-embed-version="2"
+                        data-pen-title="Animation to Explain CSS Triangles" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/lotjh/">Animation to Explain CSS Triangles</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="main-section" id="Drop_Caps">
+            <header>
+                <h2>Drop Caps</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+            <article>
+                <h3>Cross-browser way (extra markup)</h3>
+                <p>Just wrap the first character of the paragraph in a span, then target the span with CSS and style away.</p>
+                <h4>HTML</h4>
+                <pre>
+          <code class="html">      &lt;p&gt;
+            &lt;span class="firstcharacter"&gt;L&lt;/span&gt; orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique lobortis orci ac lacinia. Fusce eu purus eget diam vehicula auctor nec eu elit. Morbi consequat facilisis orci vel malesuada. Donec ultrices molestie sollicitudin. Aliquam pharetra libero enim. Donec et suscipit massa. Donec dui odio, dignissim non sodales et, tincidunt a sapien. Phasellus elit nibh, adipiscing sed blandit vel, interdum et arcu.
+          &lt;/p&gt;</code></pre>
+                <h4>CSS</h4>
+                <pre>
+          <code class="css">      .firstcharacter {
+            color: #903;
+            float: left;
+            font-family: Georgia;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+          }</code></pre>
+
+                <h3>CSS3 way (no extra markup)</h3>
+                <p>Target the first character of the first paragraph using pseudo class selectors. No extra markup needed, but
+                    no IE &lt; 9 support.</p>
+
+                <h4>HTML</h4>
+                <pre>
+          <code class="html">      &lt;p&gt;
+    &lt;span class="firstcharacter"&gt;L&lt;/span&gt; orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique lobortis orci ac lacinia. Fusce eu purus eget diam vehicula auctor nec eu elit. Morbi consequat facilisis orci vel malesuada. Donec ultrices molestie sollicitudin. Aliquam pharetra libero enim. Donec et suscipit massa. Donec dui odio, dignissim non sodales et, tincidunt a sapien. Phasellus elit nibh, adipiscing sed blandit vel, interdum et arcu.
+    &lt;/p&gt;</code></pre>
+                <h4>CSS</h4>
+                <pre>
+          <code class="css">      .firstcharacter {
+            color: #903;
+            float: left;
+            font-family: Georgia;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 8px;
+            padding-left: 3px;
+          }</code></pre>
+
+                <h3>The initial-letter way</h3>
+
+                <p>The browser support for initial-letter is pretty sparse at the time of this writing, but it can be used to
+                    calculate the number of lines the drop capped letter should occupy and the font size instead of doing
+                    that on your own.</p>
+                <h4>CSS</h4>
+                <pre>
+          <code class="css">      p:first-child:first-letter {
+            color: #903; 
+            font-family: Georgia;
+            initial-letter: 2;
+          }</code></pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Fancy_Ampersand">
+            <header>
+                <h2>Fancy Ampersand</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <p>Just a simple bit of code that defaults to the best available Helvetica.</p>
+                <h4>HTML</h4>
+                <pre><code class="html">      &lt;span class="amp"&gt;&amp;&lt;/span&gt;</code></pre>
+                <h4>CSS</h4>
+                <pre><code class="css">      .amp {
+            font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+            font-style: italic;
+            font-weight: normal;
+          }</code></pre>
+
+            </article>
+
+
+        </section>
+
+        <section class="main-section" id="Fluid_Typography">
+            <header>
+                <h2>Fluid Typography</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/geoffgraham/">Geoff Graham</a>
+            </span>
+            <article>
+                <p>Getting right to the code, here's a working implementation:</p>
+
+                <h4>CSS</h4>
+                <pre><code class="css">      html {
+            font-size: 16px;
+          }
+          
+          @media screen and (min-width: 320px) {
+            html {
+              font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            }
+          }
+          
+          @media screen and (min-width: 1000px) {
+            html {
+              font-size: 22px;
+            }
+          }</code></pre>
+
+                <p>That would scale
+                    <span class="code_highlight">font-size</span> from a minimum of 16px (at a 320px viewport) to a maximum of 22px (at a 1000px viewport).
+                    Here's a demo of that, but as a Sass @mixin (which we'll cover later).</p>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="pPRGLP" data-default-tab="result" data-user="chriscoyier"
+                        data-embed-version="2" data-pen-title="Base Example of Fluid Type w Sass" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/pPRGLP/">Base Example of Fluid Type w Sass</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+                <p>Sass was used just to make that output a little easier to generate, and the fact that there is a smide of
+                    math involved. Let's take a look.</p>
+
+                <p>Using viewport units and
+                    <span class="code_highlight">calc()</span>, we can have font-size (and other properties) adjust their size based on the size of the
+                    screen. So rather than always being the same size, or jumping from one size to the next at media queries,
+                    the size can be fluid.</p>
+
+                <p>Here's the math, credit
+                    <a href="https://madebymike.com.au/writing/fluid-type-calc-examples/">Mike Riethmuller</a>:</p>
+
+                <h4>CSS</h4>
+                <pre><code class="css">      body {
+            font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+          }</code></pre>
+
+                <p>The reason that math is a little complicated is that we're trying to avoid type ever getting smaller than
+                    our minimum or bigger than our maximum, which is very easy to do with viewport units.</p>
+
+                <p>For example, if we want the our font size in a range where
+                    <span class="code_highlight">14px</span> is the minimum size at the smallest viewport width of
+                    <span class="code_highlight">300px</span> and where
+                    <span class="code_highlight">26px</span> is the maximum size at the largest viewport width of
+                    <span class="code_highlight">1600px</span>, then our equation looks like this:</p>
+                <h4>CSS</h4>
+                <pre><code class="css">      body {
+            font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+          }</code></pre>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="JEVevK" data-default-tab="result" data-user="css-tricks"
+                        data-embed-version="2" data-pen-title="JEVevK" class="codepen">See the Pen
+                        <a href="https://codepen.io/team/css-tricks/pen/JEVevK/">JEVevK</a> by CSS-Tricks (
+                        <a href="https://codepen.io/css-tricks">@css-tricks</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <p>To lock in those minimum and maximum sizes, using this math within media queries helps. Here's some Sass
+                    to help out...</p>
+
+                <h4>In Sass</h4>
+                <p>You could make a (pretty robust) mixin, like this:</p>
+                <pre><code class="scss">      @function strip-unit($value) {
+            @return $value / ($value * 0 + 1);
+          }
+    
+          @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+            $u1: unit($min-vw);
+            $u2: unit($max-vw);
+            $u3: unit($min-font-size);
+            $u4: unit($max-font-size);
+    
+            @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+              &amp; {
+                font-size: $min-font-size;
+                @media screen and (min-width: $min-vw) {
+                  font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+                }
+                @media screen and (min-width: $max-vw) {
+                  font-size: $max-font-size;
+                }
+              }
+            }
+          }</code></pre>
+            </article>
+        </section>
+
+        <section class="main-section" id="Monotone_an_Image_with_CSS">
+            <header>
+                <h2>Monotone an Image with CSS</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+            <article>
+                <p>You can always apply a filter to an element to make it monotone in the grayscale sense:</p>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="LkQjWB" data-default-tab="result" data-user="chriscoyier"
+                        data-embed-version="2" data-pen-title="Monotone-ing an Image" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/LkQjWB/">Monotone-ing an Image</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+                <p>If you put that in a container with a background color and lower the opacity, you can get a colored monotone
+                    kind of effect:</p>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="IotDx" data-default-tab="result" data-user="chriscoyier"
+                        data-embed-version="2" data-pen-title="Monotone-ing an Image" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/IotDx/">Monotone-ing an Image</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <p>Maarten van der Velde wrote in to say that rather than lowering the opacity, we can combine it with mix-blend-mode
+                    and blowing out the contrast:</p>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="dXJLza" data-default-tab="result" data-user="chriscoyier"
+                        data-embed-version="2" data-pen-title="Monotone-ing an Image" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/dXJLza/">Monotone-ing an Image</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+                <p>Amelia Bellamy-Royds also covered using SVG color filters to do this, which has an amazing amount of control:</p>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="JdXpPB" data-default-tab="result" data-user="AmeliaBR"
+                        data-embed-version="2" data-pen-title="SVG Filters Gray -> Invert Monochrome Color" class="codepen">See the Pen
+                        <a href="https://codepen.io/AmeliaBR/pen/JdXpPB/">SVG Filters Gray -&gt; Invert Monochrome Color</a> by Amelia Bellamy-Royds (
+                        <a href="https://codepen.io/AmeliaBR">@AmeliaBR</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </article>
+        </section>
+
+        <section class="main-section" id="Tucked_Corners">
+            <header>
+                <h2>Tucked Corners</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+                <p>Just a simple bit of code that defaults to the best available Helvetica.</p>
+                <h4>HTML</h4>
+                <pre><code class="html">      &lt;div class="corners"&gt;
+             Content
+          &lt;/div&gt;</code></pre>
+                <h4>CSS</h4>
+                <pre><code class="css">      body {
+            background: #e6e6e6;
+          }
+    
+          .corners { 
+            background: #f6f6f6;
+            height: 700px;
+            margin: 50px auto;
+            max-width: 600px;
+            position: relative;
+            width: 80%;
+            box-shadow: 0 1px 7px hsla(0, 0%, 0%, 0.2);
+          }
+    
+          /* Corner Effect */
+          .corners:after,
+          .corners:before {
+            background: #e6e6e6;
+            content: '';
+            height: 50px;
+            position: absolute;
+            top: -25px;
+            width: 100px;
+            box-shadow: 0 5px 10px -7px hsla(0, 0% ,0%, 0.5);
+          }
+          .corners:after {
+            left: -50px;
+            transform: rotate(-45deg);
+          }
+          .corners:before {
+            right: -50px;
+            transform: rotate(45deg);
+          }</code></pre>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="rLXJzO" data-default-tab="result" data-user="chriscoyier"
+                        data-embed-version="2" data-pen-title="Tucked Corners" class="codepen">See the Pen
+                        <a href="https://codepen.io/chriscoyier/pen/rLXJzO/">Tucked Corners</a> by Chris Coyier (
+                        <a href="https://codepen.io/chriscoyier">@chriscoyier</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Typewriter_Effect">
+            <header>
+                <h2>Typewriter Effect</h2>
+            </header>
+            <span class="author">Written by
+                <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>
+            </span>
+
+            <article>
+
+                <h4>CSS</h4>
+                <pre><code class="css">      .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+              typing 3.5s steps(40, end),
+              blink-caret .75s step-end infinite;
+          }
+    
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+          }
+    
+          /* The typewriter cursor effect */
+          @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+          }</code></pre>
+
+                <div class="demo">
+                    <p data-height="350" data-theme-id="0" data-slug-hash="jrWwWM" data-default-tab="result" data-user="geoffgraham"
+                        data-embed-version="2" data-pen-title="jrWwWM" class="codepen">See the Pen
+                        <a href="https://codepen.io/geoffgraham/pen/jrWwWM/">jrWwWM</a> by Geoff Graham (
+                        <a href="https://codepen.io/geoffgraham">@geoffgraham</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+                    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+
+                <h4>Notes:</h4>
+                <ul>
+                    <li>Demo relies on flexbox, so that could affect the layout in testing</li>
+                    <li>Assumes the use of Autoprefixer</li>
+                    <li>The width of the text container will be determined by the length of the text being used</li>
+                    <li>Adding more steps to the typing animation will increase the smoothness of the typing</li>
+                    <li>Adjust the letter-spacing based on the font-family and font-size being used</li>
+                </ul>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Code highlighting courtesy of
+        <a href="https://highlightjs.org/usage/">highlight.js</a>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="assets/js/script.js"></script>
+</body>
+
+</html>
